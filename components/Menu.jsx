@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View ,Image ,TouchableOpacity} from 'react-native'
 import colors from '../scripts/colors'
 import React from 'react'
-import crestic from '../../assets/images/crestic.png'
-import home from '../../assets/images/home.png'
-import search from '../../assets/images/search.png'
-import like from '../../assets/images/like.png'
-import setings from '../../assets/images/setings.png'
+import crestic from '../assets/images/crestic.png'
+import home from '../assets/images/home.png'
+import search from '../assets/images/search.png'
+import like from '../assets/images/like.png'
+import settings from '../assets/images/settings.png'
 
 
 
@@ -32,7 +32,7 @@ const Menu = () => {
          <Image source={like} style={styles.buttonLike}/>
       </TouchableOpacity>   
       <TouchableOpacity>
-         <Image source={setings} style={styles.buttonSetting}/>
+         <Image source={settings} style={styles.buttonSetting}/>
       </TouchableOpacity>   
      
     </View>
