@@ -1,5 +1,5 @@
 export default {
-   primaryBackground: '#C48FFF', // Фоновый цвет основного блока
+   primaryBackground: '#b772e6', // Фоновый цвет основного блока
    titleColor:'#2e4044',         // Цвет главного заголовка
    subtitleColor:'#b3bfbf',      // цвет подзаголовка
    primaryText: '#edc8f8',       // Основной цвет текста

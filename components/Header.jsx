@@ -72,17 +72,16 @@ const styles = StyleSheet.create({
   },
 
   titleDonationContainer:{
-    fontFamily:'Roboto',
-    fontWeight:'700',
+    fontWeight:'600',
     fontSize:24,
     letterSpacing:0.8,
     color: colors.titleColor
   },
 
   subtitleDonationContainer:{
-    fontSize:16,
+    fontSize:18,
+    letterSpacing:0.8,
     color: colors.subtitleColor,
-    fontFamily: 'Roboto',
   },
   
   HeartImage:{

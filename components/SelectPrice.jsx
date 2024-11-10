@@ -43,9 +43,8 @@ const styles = StyleSheet.create({
    },
 
    selectTitle:{
-      fontSize:18,
+      fontSize:20,
       color: '#edc8f8',
-      fontFamily: 'Roboto',
       marginBottom:26,
    },
 

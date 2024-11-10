@@ -31,9 +31,8 @@ const styles = StyleSheet.create({
    },
 
    paymentTitle:{
-      fontSize:18,
+      fontSize:20,
       color: colors.primaryText,
-      fontFamily: 'Roboto',
       marginBottom:26,
    },
 
