@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   
   HeartImage:{
-    width:31,
-    height:28,
+    width:30,
+    height:30,
   },
 })

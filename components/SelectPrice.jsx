@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
    selectItemPrice:{
       color:colors.buttonText,
       fontSize:15,
-      fontWeight:'800',
+      fontWeight:'600',
       letterSpacing:0.5,
       paddingHorizontal:25,
    },
