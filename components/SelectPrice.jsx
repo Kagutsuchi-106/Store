@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View ,TouchableOpacity } from 'react-native'
 import React from 'react'
-import colors from '../../scripts/colors'
+import colors from '../scripts/colors'
 
 const SelectPrice = () => {
   return (

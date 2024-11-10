@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View ,Image ,TouchableOpacity} from 'react-native'
-import colors from '../../scripts/colors'
+import colors from '../scripts/colors'
 import React from 'react'
 import crestic from '../../assets/images/crestic.png'
 import home from '../../assets/images/home.png'

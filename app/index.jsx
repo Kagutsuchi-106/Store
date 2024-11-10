@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View,TouchableOpacity } from 'react-native'
-import Header from '../components/navigation/Header'
-import SelectPrice from '../components/navigation/SelectPrice'
+import Header from '../components/Header'
+import SelectPrice from '../components/SelectPrice'
 import Payment from '../components/Payment'
-import Menu from '../components/navigation/Menu'
+import Menu from '../components/Menu'
 import colors from '../scripts/colors'
 import React from 'react'
 

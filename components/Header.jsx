@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native'
 import React from 'react'
-import colors from '../../scripts/colors'
+import colors from '../scripts/colors'
 import ButtonImage from '../../assets/images/backButton.png'
 import HeartImage from '../../assets/images/heart.png'
 
