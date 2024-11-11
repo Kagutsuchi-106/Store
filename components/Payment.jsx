@@ -1,21 +1,36 @@
+
+
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import colors from '../scripts/colors'
-import React from 'react'
+import React, { useState } from 'react';
+
 
 const Payment = () => {
+   const[selectedMethod,setSelectedMethod]= useState(null)
+   const  handleSelectMethod =(method)=>{
+      setSelectedMethod(method)
+
+   }
+
   return (
    <View style={styles.paymentContainer}>
 
       <Text style={styles.paymentTitle}>Payment method</Text>
       <View style={styles.paymentItemContainer}>
-         <TouchableOpacity style={styles.paymentItem}> 
-            <Text style={styles.paymentItemPrice}>Credit</Text>
-            <Text style={styles.paymentItemPrice}>card</Text>
-         </TouchableOpacity>
-         <TouchableOpacity style={styles.paymentItem}> 
-            <Text style={styles.paymentItemPrice}>Bank</Text>
-            <Text style={styles.paymentItemPrice}>transfer</Text>
-         </TouchableOpacity>
+
+         {['Credit card','Bank transfer'].map((method, index)=>(
+            <TouchableOpacity 
+               style={[
+                  styles.paymentItem,
+                  selectedMethod === method && styles.paymentItemSelected]}
+               key={index}
+               onPress={() => handleSelectMethod(method)} 
+            > 
+               <Text style={styles.paymentItemMethod}>{method}</Text>
+            </TouchableOpacity>
+
+         ))}
+        
       </View>
     
     </View>
@@ -44,22 +59,27 @@ const styles = StyleSheet.create({
    },
 
    paymentItem:{
+      alignItems:'center',
+      justifyContent:'center',
       backgroundColor:colors.buttonBackground,
-      width:'45%',
+      width:'48%',
       height:'100%',
       borderRadius:50,
       paddingHorizontal:'10%',
-      alignItems:'center',
-      justifyContent:'center',
+      
    },
-
-   paymentItemPrice:{
+   paymentItemSelected: {
+      borderColor:colors.selectedItemBorder,
+      borderWidth:3, 
+   },
+   paymentItemMethod:{
       color:colors.buttonText,
       fontSize:20,
       fontWeight:'400',
       alignItems:'center',
       justifyContent:"center",
       letterSpacing:0.6,
+      textAlign:"center",
    },
  
 })

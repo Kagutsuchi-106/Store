@@ -10,6 +10,7 @@ import settings from '../assets/images/settings.png'
 
 
 const Menu = () => {
+   
   return (
     <View style={styles.container}>
       <TouchableOpacity>

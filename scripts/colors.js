@@ -8,6 +8,6 @@ export default {
    buttonText: '#FFFFFF',        // Цвет текста на кнопках
    iconColor: '#b772e6',         // Цвет для иконок доллара 
    donateButton:'#b578ce',       // Цвет текста на кнопке donate
-
+   selectedItemBorder:'white',   // Цвет границы выделенного элемента
    
 };
