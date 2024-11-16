@@ -3,40 +3,40 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 import colors from '../scripts/colors';
 
-const SelectPrice = () => {
-  // Состояние для отслеживания выбранной суммы
-  const [selectedAmount, setSelectedAmount] = useState(null);
 
-  // Обработчик для выбора суммы
-  const handleSelectAmount = (amount) => {
-    setSelectedAmount(amount); 
-  };
 
-  return (
-    <View style={styles.selectContainer}>
-      <Text style={styles.selectTitle}>Select amount</Text>
-      <View style={styles.selectItemContainer}>
-        
-        {['$10.00', '$20.00', '$30.00'].map((price, index) => (
-          <TouchableOpacity
-            key={index}
-            style={[
-              styles.selectItem,
-              selectedAmount === price && styles.selectItemSelected 
-            ]}
-            onPress={() => handleSelectAmount(price)} 
-          >
-            <View style={styles.selectItemIconBackground}>
-              <Text style={styles.selectItemIcon}>$</Text>
-            </View>
-            <Text style={styles.selectItemPrice}>{price}</Text>
-          </TouchableOpacity>
-        ))}
+const SelectPrice = ({ priceList = ['$11.00', '$20.00', '$30.00'] }) => {
+	// Состояние для отслеживания выбранной суммы
+	const [selectedAmount, setSelectedAmount] = useState(null)
 
-      </View>
-    </View>
-  );
-};
+	// Обработчик для выбора суммы
+	const handleSelectAmount = amount => {
+		setSelectedAmount(amount)
+	}
+
+	return (
+		<View style={styles.selectContainer}>
+			<Text style={styles.selectTitle}>Select amount</Text>
+			<View style={styles.selectItemContainer}>
+				{priceList.map((price, index) => (
+					<TouchableOpacity
+						key={index}
+						style={[
+							styles.selectItem,
+							selectedAmount === price && styles.selectItemSelected,
+						]}
+						onPress={() => handleSelectAmount(price)}
+					>
+						<View style={styles.selectItemIconBackground}>
+							<Text style={styles.selectItemIcon}>$</Text>
+						</View>
+						<Text style={styles.selectItemPrice}>{price}</Text>
+					</TouchableOpacity>
+				))}
+			</View>
+		</View>
+	)
+}
 
 export default SelectPrice;
 
